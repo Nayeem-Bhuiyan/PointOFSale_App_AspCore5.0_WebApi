@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        });
+
+        function AddCartemItem() {
+            $('button[name="AddCardItem"]').click(function() {
+                var row = $("787.").find("tr");
+               
+
+                for (var i = 0; i <= row.length; i++) {
+                    $('table').find("tr").eq(i).find("td").eq(1).text();
+                }
+            })
+        }
+    </script>
+
+</head>
+<body>
+    <div class="row">
+        <table>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+        <button type="button" class="btn btn-primary" name="AddCardItem" onclick="AddCartemItem()">Add To Cart</button>
+    </div>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>ProductName</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
+

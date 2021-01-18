@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="~/Scripts/jquery-3.4.1.slim.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <table class="table table-bordered">
+                    <tr>
+                        <td><input type="text" name="CustomerMobile" id="CustomerMobile" value="" class="form-control" placeholder="Customer Mobile" /></td>
+                        <td><button type="button" id="btnCustomerSearch" class="btn btn-primary">Search Customer</button></td>
+                        <td><label>Date</label>:</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <form action="/" method="post">
+
+
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>Category</td>
+                            <td><select id="dptProducts" onmouseup="LoadBrandsByProductId()" class="form-control"></select></td>
+                        </tr>
+                        <tr>
+                            <td>Brand</td>
+                            <td><select id="dptBrands" onmouseup="LoadCategoryByBrandId()" class="form-control"></select></td>
+                        </tr>
+                        <tr>
+                            <td>Product</td>
+                            <td><select id="dptCategoty" class="form-control" onmouseup="StockRemaining()"></select></td>
+                        </tr>
+                        <tr>
+                            <td>Stock Remaining</td>
+                            <td id="stockCount"></td>
+                        </tr>
+                        <tr>
+                            <td>Quantity</td>
+                            <td><input type="text" name="Quantity" id="Quantity" value="" placeholder="Quantity" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td>UnitPrice</td>
+                            <td><input type="text" name="UnitPrice" id="UnitPrice" value="" placeholder="UnitPrice" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td>Discount</td>
+                            <td><input type="text" name="Discount_Percentage" id="Discount_Percentage" value="" placeholder="Discount_Percentage" class="form-control" /></td>
+                        </tr>
+                        <tr>
+                            <td>Employee</td>
+                            <td><select id="dptEmployee" class="form-control"></select></td>
+                        </tr>
+                        <tr>
+                            <td>Customer</td>
+                            <td><select id="CustomerId" class="form-control"></select></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button type="button" class="btn btn-success" id="btnAdd" onclick="PostSellProductRecord()">Add To Cart</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+        </div>
+
+
+        @*<div id="LoadProductList">
+
+            </div>*@
+    </div>
+
+
+
+
+
+    <script src="~/Scripts/ProjectScript/CommonData.js"></script>
+    <script src="~/Scripts/ProjectScript/ProductSellScripts.js"></script>
+</body>
+</html>
+
+
+
